@@ -56,6 +56,9 @@
         <div class="p-6">
             {{ $slot }}
         </div>
+        @persist('player') 
+            <audio src="jesusOh.mp3" controls></audio>
+        @endpersist
     </main>
 </body>
 
