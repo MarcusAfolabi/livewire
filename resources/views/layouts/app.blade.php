@@ -21,19 +21,19 @@
             <nav class="flex-1 overflow-y-auto">
                 <ul class="p-2 space-y-2">
                     <li>
-                        <a wire:navigate href="/" class="block px-4 py-2 text-sm {{ Request::is('/') ? 'font-semibold' : 'font-normal' }} hover:bg-gray-900">Posts</a>
+                        <a wire:navigate.hover href="/" class="block px-4 py-2 text-sm {{ Request::is('/') ? 'font-semibold' : 'font-normal' }} hover:bg-gray-900">Home</a>
                     </li>
                     <li>
-                        <a wire:navigate href="/counter" class="block px-4 py-2 text-sm {{ Request::is('counter') ? 'font-semibold' : 'font-normal' }} hover:bg-gray-900">Counter</a>
+                        <a wire:navigate.hover href="/counter" class="block px-4 py-2 text-sm {{ Request::is('counter') ? 'font-semibold' : 'font-normal' }} hover:bg-gray-900">Counter</a>
                     </li>
                     <li>
-                        <a wire:navigate href="/todos" class="block px-4 py-2 text-sm {{ Request::is('todos') ? 'font-semibold' : 'font-normal' }} hover:bg-gray-900">Todos</a>
+                        <a wire:navigate.hover href="/todos" class="block px-4 py-2 text-sm {{ Request::is('todos') ? 'font-semibold' : 'font-normal' }} hover:bg-gray-900">Todos</a>
                     </li>
                     <li>
-                        <a wire:navigate href="/show-posts" class="block px-4 py-2 text-sm {{ Request::is('show-posts') ? 'font-semibold' : 'font-normal' }} hover:bg-gray-900">All Post</a>
+                        <a wire:navigate.hover href="/show-posts" class="block px-4 py-2 text-sm {{ Request::is('show-posts') ? 'font-semibold' : 'font-normal' }} hover:bg-gray-900">All Post</a>
                     </li>
                     <li>
-                        <a wire:navigate href="/create-post" class="block px-4 py-2 text-sm {{ Request::is('show-posts') ? 'font-semibold' : 'font-normal' }} hover:bg-gray-900">Create Post</a>
+                        <a wire:navigate.hover href="/create-post" class="block px-4 py-2 text-sm {{ Request::is('show-posts') ? 'font-semibold' : 'font-normal' }} hover:bg-gray-900">Create Post</a>
                     </li>
                 </ul>
             </nav>

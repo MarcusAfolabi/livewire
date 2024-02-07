@@ -1,38 +1,25 @@
-
-<div>
-  <main class="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
-    <div class="text-center">
-      <p class="text-base font-semibold text-indigo-600"> Live Update of Posts</p>
-      <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Posts</h1>
-      <p class="mt-6 text-base leading-7 text-gray-600">Enjoy Livewire with validation</p>
-      <form wire:submit.prevent="save">
-        <div class="grid grid-cols-1 md:px-28 gap-x-8 gap-y-6 sm:grid-cols-2 mt-6">
-          <div class="sm:col-span-2">
-            <label class="block text-xs font-normal text-black sm:text-sm sm:font-semibold">Title</label>
-            <div class="mt-2">
-              <input type="tel" name="title" wire:model="title" class="block w-full h-12 px-4 py-3 bg-gray-100 border-0 border-b border-transparent rounded-md focus:border-green-500 focus:ring-0 sm:text-md" placeholder="enter title">
-            </div>
-            @error('title') <em class="text-red-500">{{ $message }}</em>@enderror
-          </div>
-          <div class="sm:col-span-2">
-            <label class="block text-xs font-normal text-black sm:text-sm sm:font-semibold">Content</label>
-            <div class="mt-2">
-              <textarea type="tel" name="title" wire:model="content" class="block w-full h-12 px-4 py-3 bg-gray-100 border-0 border-b border-transparent rounded-md focus:border-green-500 focus:ring-0 sm:text-md" placeholder="enter content"></textarea>
-            </div>
-            <small>Character:
-              <span x-text="$wire.content.length"></span>
-            </small>
-            <small>Word:
-              <span x-text="$wire.content.split(' ').length -1"></span>
-            </small>
-          </div>
-          @error('content') <em class="text-red-500">{{ $message }}</em>@enderror
-          <button type="button" x-on:click="$wire.save()" class="bg-green-500 text-white px-3 py-3 rounded-lg mt-7 justify-between">Save</button>
-          <div wire:loading>
-            Saving data
-          </div>
-        </div> 
-      </form> 
-  </main>
- 
+<div class="bg-white">
+  <div class="relative isolate px-6 pt-1 lg:px-8">
+    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+      <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+      <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+        <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+          This programme is designed to take you ... <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+      <div class="text-center">
+        <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">In-Demand Jobs In Web Development</h1>
+        <p class="mt-6 text-lg leading-8 text-gray-600">Being a front-end developer is a bit like being an architect for websites and apps. Your role is to build and maintain what people see and interact with on a website. This includes anything from the layout to the way a button behaves when a user clicks on it. As a front-end developer, you make ideas and designs come to life.</p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
+          <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+      <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    </div>
+  </div>
 </div>
