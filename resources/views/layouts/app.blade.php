@@ -33,6 +33,9 @@
                     <li>
                         <a wire:navigate.hover href="/create-post" class="block px-4 py-2 text-sm {{ Request::is('show-posts') ? 'font-semibold' : 'font-normal' }} hover:bg-gray-900">Create Post</a>
                     </li> 
+                     <li>
+                        <a wire:navigate.hover href="/photo" class="block px-4 py-2 text-sm {{ Request::is('photo') ? 'font-semibold' : 'font-normal' }} hover:bg-gray-900">Photo</a>
+                    </li> 
                 </ul>
             </nav>
 
