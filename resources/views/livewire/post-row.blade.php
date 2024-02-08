@@ -7,7 +7,10 @@
         <button 
         type="button" 
         wire:click="$parent.delete({{ $post->id }})" 
-        wire:confirm="Are you sure you want to delete this post?" class="bg-red-500 rounded-lg px-2 py-2 text-white">
+            {{-- wire:confirm.prompt="Are you sure?\n\nType DELETE to confirm|DELETE" --}}
+
+        wire:confirm="Are you sure you want to delete this post?" 
+        class="bg-red-500 rounded-lg px-2 py-2 text-white">
         Delete
         </button>
           

@@ -22,7 +22,7 @@ class CreatePost extends Component
     #[Rule('max:100', message: 'Yo, that too long')]
     public $content = '';
 
-
+    public $receiveUpdates = false;
     public function saver()
     {
         $this->validate();
