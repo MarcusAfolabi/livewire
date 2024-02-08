@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Livewire\Post;
 use App\Livewire\Todos;
 use App\Livewire\Counter;
@@ -21,3 +22,9 @@ Route::get('/todos', Todos::class);
 
 Route::get('/photo', UploadPhoto::class);
 
+
+Route::get('/product', [ProductController::class, 'index']);
+
+Route::get('/home', function(){
+    return view('welcome');
+});
