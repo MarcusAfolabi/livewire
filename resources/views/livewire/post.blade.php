@@ -16,6 +16,9 @@
         <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">In-Demand Jobs In Web Development</h1>
         <p class="mt-6 text-lg leading-8 text-gray-600">Being a front-end developer is a bit like being an architect for websites and apps. Your role is to build and maintain what people see and interact with on a website. This includes anything from the layout to the way a button behaves when a user clicks on it. As a front-end developer, you make ideas and designs come to life.</p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
+          <div x-data="{ open: false }">
+            <button @click="open = ! open">Open Modal</button> 
+          </div>
           <a href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Get started</a>
           <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Learn more <span aria-hidden="true">→</span></a>
         </div>
@@ -26,3 +29,8 @@
     </div>
   </div>
 </div>
+@teleport('body')
+<div x-show="open">
+  Modal contents...
+</div>
+@endteleport
