@@ -12,12 +12,12 @@
         {{ session('status') }}
     </div>
 @endif
-      <form wire:submit="saver">
+      <form wire:submit.prevent="saver">
         <div class="grid grid-cols-1 md:px-28 gap-x-8 gap-y-6 sm:grid-cols-2 mt-6">
           <div class="sm:col-span-2">
             <label class="block text-xs font-normal text-black sm:text-sm sm:font-semibold">Title</label>
             <div class="mt-2">
-              <input type="text"  wire:model.live="title" class="block w-full h-12 px-4 py-3 bg-gray-100 border-0 border-b border-transparent rounded-md focus:border-green-500 focus:ring-0 sm:text-md" placeholder="enter title">
+              <input type="text" wire:model.live="title" class="block w-full h-12 px-4 py-3 bg-gray-100 border-0 border-b border-transparent rounded-md focus:border-green-500 focus:ring-0 sm:text-md" placeholder="enter title">
             </div>
             @error('title') <em class="text-red-500">{{ $message }}</em>@enderror
           </div>
@@ -34,7 +34,7 @@
             </small>
           </div>
           @error('content') <em class="text-red-500">{{ $message }}</em>@enderror
-          <button type="submit" class="bg-green-500 text-white px-3 py-3 rounded-lg mt-7 justify-between">Save</button>
+          <button wire:offline.attr="disabled" type="submit" class="bg-green-500 text-white px-3 py-3 rounded-lg mt-7 justify-between">Save</button>
           <div wire:loading>
             Saving data
           </div>

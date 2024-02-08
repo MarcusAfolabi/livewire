@@ -9,6 +9,9 @@
           This programme is designed to take you ... <a href="#" class="font-semibold text-indigo-600"><span class="absolute inset-0" aria-hidden="true"></span>Read more <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
+      <div wire:offline>
+        This device is currently offline.
+      </div>
       <div class="text-center">
         <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">In-Demand Jobs In Web Development</h1>
         <p class="mt-6 text-lg leading-8 text-gray-600">Being a front-end developer is a bit like being an architect for websites and apps. Your role is to build and maintain what people see and interact with on a website. This includes anything from the layout to the way a button behaves when a user clicks on it. As a front-end developer, you make ideas and designs come to life.</p>
