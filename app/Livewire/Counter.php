@@ -9,6 +9,7 @@ class Counter extends Component
 {
     public $count = 1;
     #[Title("Counter")]
+  
 
     public function increasement()
     {

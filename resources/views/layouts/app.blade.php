@@ -16,8 +16,6 @@
             <div class="px-4 py-6">
                 <h1 class="text-white text-2xl font-semibold">Livewire</h1>
             </div>
-            <!-- Navigation Links -->
-            <!-- Navigation Links -->
             <nav class="flex-1 overflow-y-auto">
                 <ul class="p-2 space-y-2">
                     <li>
@@ -51,14 +49,15 @@
         <!-- Header -->
         <header class="bg-white shadow-lg py-4 px-6">
             <h2 class="text-xl font-semibold text-gray-800">{{ $title ?? 'Page Title' }}</h2>
+            @persist('player')
+            <audio src="jesusOh.mp3" controls></audio>
+            @endpersist
         </header>
         <!-- Content -->
         <div class="p-6">
             {{ $slot }}
         </div>
-        @persist('player') 
-            <audio src="jesusOh.mp3" controls></audio>
-        @endpersist
+
     </main>
 </body>
 
