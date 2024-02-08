@@ -16,11 +16,9 @@ class CreatePost extends Component
     public $product;
     
     #[Title("Create Post")]
-
     
-    #[Rule('required', message: 'Yo, add a title')]
-
-    #[Rule('required', message: 'Yo, add a product')]
+    
+   
     #[Validate('image|max:1024')] // 1MB Max
     public $photos;
 
@@ -28,34 +26,33 @@ class CreatePost extends Component
     #[Rule('min:10', message: 'Yo, that too short')]
     #[Rule('max:50', message: 'Yo, that too long for a product name. make it concise')]
     public $name;
-
-    #[Rule('required', message: 'Yo, add a content')]
-    #[Rule('max:100', message: 'Yo, that too long')]
-
-    public $description = '';
+ 
     #[Rule('required', message: 'Yo, add a description')]
+    #[Rule('max:100', message: 'Yo, that too long for a product description. make it appealing')]
+    public $description = '';
 
     public $slug;
     #[Rule('required', message: 'Yo, add a slug')]
 
-    public $category = '';
+    public $category;
+    public $categories = ['fish', 'goat', 'lion', 'king'];
     #[Rule('required', message: 'Yo, add a category')]
 
-    public $price = '';
     #[Rule('required', message: 'Yo, add a price')]
+    public $price = '';
 
-    public $quantity = '';
     #[Rule('required', message: 'Yo, add a quantity')]
+    public $quantity = '';
 
-    public $width = '';
     #[Rule('required', message: 'Yo, add a width')]
+    public $width = '';
 
-    public $height = '';
     #[Rule('required', message: 'Yo, add a height')]
+    public $height = '';
 
+    public $content = '';
     #[Rule('required', message: 'Yo, add a content')]
     #[Rule('max:100', message: 'Yo, that too long')]
-    public $content = '';
 
     public $receiveUpdates = false;
 
